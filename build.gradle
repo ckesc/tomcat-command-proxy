@@ -1,0 +1,20 @@
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+version = '1.0'
+mainClassName = "ru.ckesc.tomcatCommandProxy.Main"
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.apache.httpcomponents:httpclient:4.3.+'
+    compile 'org.apache.httpcomponents:httpmime:4.3.+'
+    compile 'net.sf.jopt-simple:jopt-simple:4.+'
+}
